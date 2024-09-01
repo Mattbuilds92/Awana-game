@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awana Score App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div id="Red" class="box red" onclick="selectRanking('Red')"></div>
+            <div id="Blue" class="box blue" onclick="selectRanking('Blue')"></div>
+            <div id="Green" class="box green" onclick="selectRanking('Green')"></div>
+            <div id="Yellow" class="box yellow" onclick="selectRanking('Yellow')"></div>
+        </div>
+        <div class="middle">
+            <div id="Red-points" class="score">Red: 0</div>
+            <div id="Blue-points" class="score">Blue: 0</div>
+            <div id="Green-points" class="score">Green: 0</div>
+            <div id="Yellow-points" class="score">Yellow: 0</div>
+        </div>
+        <div class="right-side">
+            <div class="adjustment">
+                <button onclick="adjustPoints('Red', 25)">+25</button>
+                <button onclick="adjustPoints('Red', -25)">-25</button>
+            </div>
+            <div class="adjustment">
+                <button onclick="adjustPoints('Blue', 25)">+25</button>
+                <button onclick="adjustPoints('Blue', -25)">-25</button>
+            </div>
+            <div class="adjustment">
+                <button onclick="adjustPoints('Green', 25)">+25</button>
+                <button onclick="adjustPoints('Green', -25)">-25</button>
+            </div>
+            <div class="adjustment">
+                <button onclick="adjustPoints('Yellow', 25)">+25</button>
+                <button onclick="adjustPoints('Yellow', -25)">-25</button>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button onclick="scoreTeams()">Score Rankings</button>
+        <button onclick="clearScores()">Clear All Scores</button>
+    </div>
+    <div id="confirm-dialog">
+        <p>Are you sure you want to clear all scores?</p>
+        <button onclick="confirmClear(true)">Yes</button>
+        <button onclick="confirmClear(false)">No</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
